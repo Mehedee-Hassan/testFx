@@ -20,10 +20,34 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
 
-        drawCircle(primaryStage);
-
+      //  drawCircle(primaryStage);
+        drawRectangel(primaryStage);
     }
 
+    private void drawRectangel(Stage primaryStage) {
+
+        int strokWidth = 2;
+        int arcWidth = 30;
+        int arcHeight = 30;
+
+        Color strokeColor = Color.BROWN;
+
+        Group root = new Group();
+        Rectangle rectangle1 = new Rectangle(40 ,40 ,80,80);
+        rectangle1.setFill(Color.LIGHTSALMON);
+        rectangle1.setStroke(strokeColor);
+        rectangle1.setStrokeWidth(strokWidth);
+        rectangle1.setArcHeight(arcHeight);
+        rectangle1.setArcWidth(arcWidth);
+
+        root.getChildren().addAll(rectangle1);
+
+        Scene scene = new Scene(root ,650 ,200);
+        primaryStage.setTitle("Circle");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+    }
 
 
     private void drawCircle(Stage primaryStage) {
