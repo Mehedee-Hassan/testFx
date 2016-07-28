@@ -1,0 +1,48 @@
+package test.event;
+
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.effect.Reflection;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class Test extends Application{
+
+
+		@Override
+		public void start(Stage primaryStage) throws Exception {
+			HBox hBox = new HBox();
+			hBox.setBackground(null);
+			hBox.setAlignment(Pos.CENTER);
+			hBox.setSpacing(12);
+			Button aButton = new Button("Press Me!");
+			aButton.setId("aButton");
+			aButton.setOnAction(e -> changeNodeVisibility(aButton.getScene(),
+					"MyCheckbox"));
+					
+			CheckBox aCheckBox = new CheckBox("Hello");
+			aCheckBox.setId("aCheckBox");
+			aCheckBox.setOpacity(0.7d);
+			aCheckBox.setEffect(new Reflection());
+			hBox.getChildren().addAll(aButton,aCheckBox);
+			
+			Scene aScene = new Scene(hBox ,400 ,400);
+			primaryStage.setScene(aScene);
+			primaryStage.show();
+			
+				
+		}
+
+		private Object changeNodeVisibility(Scene scene, String string) {
+			Node node = scene.lookup("#" +id)
+			
+			return null;
+		}
+	
+	
+
+}

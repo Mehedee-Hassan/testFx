@@ -1,0 +1,17 @@
+package test.event;
+
+import javafx.application.Application;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class Test extends Application{
+
+
+		@Override
+		public void start(Stage primaryStage) throws Exception {
+			
+		}
+	
+	
+
+}
