@@ -38,11 +38,11 @@ public class Main extends Application {
         circle1.setStroke(strokeColor);
         circle1.setStrokeWidth(strokeWidth);
 
-        Circle circle2 = new Circle(220,100,radius,Color.YELLOW);
+        Circle circle2 = new Circle(280,100,radius,Color.YELLOW);
         circle2.setStroke(strokeColor);
         circle2.setStrokeWidth(strokeWidth);
 
-        Circle circle3 = new Circle(330,100,radius,Color.PALEGREEN);
+        Circle circle3 = new Circle(450,100,radius,Color.PALEGREEN);
         circle3.setStroke(strokeColor);
         circle3.setStrokeWidth(strokeWidth);
 
