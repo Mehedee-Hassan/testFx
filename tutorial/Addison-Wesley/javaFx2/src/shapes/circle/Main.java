@@ -8,6 +8,7 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -21,7 +22,7 @@ public class Main extends Application {
 
 
       //  drawCircle(primaryStage);
-        drawRectangel(primaryStage);
+        drawLine(primaryStage);
     }
 
     private void drawRectangel(Stage primaryStage) {
@@ -89,10 +90,27 @@ public class Main extends Application {
         Scene scene = new Scene(root ,650 ,200);
         primaryStage.setTitle("Circle");
         primaryStage.setScene(scene);
+
         primaryStage.show();
 
     }
 
+
+    private void drawLine(Stage primaryStage){
+
+        Group root = new Group();
+        Line line1 = new Line(20,50,400 ,50);
+        line1.setStrokeWidth(5);
+        line1.setStroke(Color.GREEN);
+        line1.getStrokeDashArray().addAll(20d,20d);
+
+        root.getChildren().addAll(line1);
+
+        Scene scene = new Scene(root ,650 ,200);
+        primaryStage.setTitle("Circle");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
 
     public static void main(String[] args) {
         launch(args);
